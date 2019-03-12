@@ -1,0 +1,75 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package javaclasspratik;
+
+/**
+ *
+ * @author Pratik
+ */
+public abstract class Person {
+    String ID;
+    String Name;
+    String Address;
+    
+    Person(String ID, String Name, String Address){
+        this.ID= ID;
+        this.Name=Name;
+        this.Address= Address;
+    }
+    
+    abstract void print();
+}
+
+class Students extends Person{
+     int roll;
+     String course;
+
+    public Students(String ID, String Name, String Address) {
+        super(ID, Name, Address);
+    }
+    
+    public void setRoll(int Roll){
+        this.roll=Roll;
+    }
+    
+    public void setCourse(String course){
+        this.course=course;
+    }
+    
+    public int getRoll(){
+        return roll;
+    }
+    
+    public String getCourse(){
+        return course;
+    }
+    
+     void print(){
+         System.out.println("Id= "+ID + " Name= " + Name +" Address= " + Address );
+     }
+
+}
+
+class Teacher extends Person{
+    String Teaching_Course;
+
+    public Teacher(String ID, String Name, String Address) {
+        super(ID, Name, Address);
+    }
+    
+    public void setTeaching_Course(String TC){
+        this.Teaching_Course=TC;
+    }
+    
+    public String getTeaching_Course(){
+        return Teaching_Course;
+    }
+            
+    void print(){
+        System.out.println("Id= "+ID + " Name= " + Name +" Address= " + Address );
+    }
+    
+}

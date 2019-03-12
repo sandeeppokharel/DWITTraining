@@ -1,0 +1,14 @@
+class student
+	{
+	int roll_no;
+	string name;
+	 student (int r, string n){
+	 this.roll_no =r;
+	 this.name = n;
+	 }
+	 void display()
+	 {
+		system.out.println(roll_no+" "+name);
+		}
+	}
+	 
